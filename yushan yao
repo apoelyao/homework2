@@ -170,13 +170,4 @@ print(calculate_vega(C_max_sigma[0,0],C_min_sigma[0,0],dt))
 print("rho value")
 print(calculate_rho(C_max_r[0,0],C_min_r[0,0],dt))
 
-m = range(1, 200, 1)
-CRR_values = [CRR_european_option_value(S0, K, T, r, sigma, 'call', M) for M in m]
-plt.figure(figsize=(9, 5))
-plt.plot(m, CRR_values, label='CRR')
 
-plt.xlabel('Steps')
-plt.ylabel('European call option value')
-plt.legend(loc=4)
-plt.xlim(0, 200)
-plt.show()
